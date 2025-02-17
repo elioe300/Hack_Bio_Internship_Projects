@@ -26,25 +26,19 @@ print(proteins)
 ## Code Explanation
 ### When translate_DNA_to_protein is invoked, the following functions are also executed:
 #### Functions:
-1. translate_DNA_to_mRNA.
-
-Translate a DNA sequence to mRNA
+1. translate_DNA_to_mRNA. Translate a DNA sequence to mRNA
 ```python
 mRNA = translate_DNA_to_mRNA("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")
 print(mRNA)  # Output: AUGGCCAUUGUAAUGGGCCGCUGAAAGGGUGCCCGAUAG
 ```
 
-2. genetic_code.
-   
-Translate a mRNA sequence to a protein sequence
+2. genetic_code. Translate a mRNA sequence to a protein sequence
 ```python
 protein = genetic_code("AUGGCCAUUGUAAUGGGCCGCUGAAAGGGUGCCCGAUAG")
 print(protein) # Output: 'MAIVMGR' and 'MGR'. If multiple protein sequences are present within the same mRNA sequence, the function will produce one output at a time. However, since it is encapsulated within a loop, it will ultimately generate all the protein sequences.  
 ```
 
-3. translate_DNA_to_protein.
-
-Translate a full DNA sequence into all possible proteins
+3. translate_DNA_to_protein. Translate a full DNA sequence into all possible proteins
 ```python
 proteins = translate_DNA_to_protein("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")
 print(proteins) # Output: ['MAIVMGR', 'MGR']
@@ -94,16 +88,13 @@ Generates logistic growth data for a specified number of iterations.
 ## Code Explanation
 ### When logistic_equation is invoked, the following functions are also executed:
 #### Functions
-1. logistic_function.
+1. logistic_function(time, growth_rate, midpoint, L). Computes the logistic function value at a given time.
 
 ```python
 result = logistic_function(1, 0.1, 10, 1)
 print(result) #Output: 0.289050497374996
 ```
 
-logistic_function(time, growth_rate, midpoint, L)
-
-Computes the logistic function value at a given time.
 
 - Parameters:
 
@@ -119,14 +110,12 @@ Computes the logistic function value at a given time.
 
   - The logistic function value at the given time.
 
-2. get_80_percent_result(data_frames, index, midpoint)
+2. get_80_percent_result(data_frames, index, midpoint). Finds the logistic function value at 80% of the midpoint time.
 
 ```python
 result = get_80_percent_result(dataframe, 1, 10)
 print(result) # Output: 0.6456563062257954
 ````
-
-Finds the logistic function value at 80% of the midpoint time.
 
 - Parameters:
 
