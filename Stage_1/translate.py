@@ -1,5 +1,5 @@
 # Function to translate a DNA sequence into a protein sequence
-def genetic_code(DNA_sequence):
+def genetic_code(mRNA_sequence):
     translated_protein = ""
     
     # Genetic code dictionary
@@ -24,15 +24,15 @@ def genetic_code(DNA_sequence):
 
 
     # Iterate through the DNA sequence in steps of 3 (triplets)
-    for i in range(0, len(DNA_sequence), 3):
-        codon = DNA_sequence[i:i+3]  # Extract codon (three nucleotides)
+    for i in range(0, len(mRNA_sequence), 3):
+        codon = mRNA_sequence[i:i+3]  # Extract codon (three nucleotides)
 
         # Ensure the codon is exactly three nucleotides
         if len(codon) != 3:
             break
         
         # Stop translation if a STOP codon is encountered
-        if codon in ["TAA", "TAG", "TGA"]:
+        if codon in ["UAA", "UAG", "UGA"]:
             break
 
         # Add the corresponding amino acid to the translated protein
@@ -57,7 +57,7 @@ def translate_DNA_to_protein(DNA_sequence):
             break
         
         # If start codon "ATG" is found, translate from this point
-        if codon == "ATG":
+        if codon == "AUG":
             protein = genetic_code(mRNA_sequence[i:])  # Translate from start codon
             translated_proteins_list.append(protein)
 
