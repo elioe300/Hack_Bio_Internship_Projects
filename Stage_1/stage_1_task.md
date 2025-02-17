@@ -10,7 +10,7 @@ This task involves writing multiple functions related to bioinformatics and popu
 - Use the standard genetic code to map codons to amino acids.
 - Ensure your function considers start/stop codons.
 
-[Please refer to the README document for a comprehensive explanation.](https://github.com/elioe300/Hack_Bio_Internship_Projects/blob/main/Stage_1/stage_1_readme.md#dna-to-protein-translation)]
+[Please refer to the README document for a comprehensive explanation.](https://github.com/elioe300/Hack_Bio_Internship_Projects/blob/main/Stage_1/stage_1_readme.md#dna-to-protein-translation)
 
 ---
 
@@ -26,7 +26,7 @@ This task involves writing multiple functions related to bioinformatics and popu
 
 [[See population growth curve reference here](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fsrep15159/MediaObjects/41598_2015_Article_BFsrep15159_Fig1_HTML.jpg)]
 
-[Please refer to the README document for a comprehensive explanation.](https://github.com/elioe300/Hack_Bio_Internship_Projects/blob/main/Stage_1/stage_1_readme.md#logistic-growth-model)]
+[Please refer to the README document for a comprehensive explanation.](https://github.com/elioe300/Hack_Bio_Internship_Projects/blob/main/Stage_1/stage_1_readme.md#logistic-growth-model)
 
 ---
 
@@ -50,7 +50,7 @@ This task involves writing multiple functions related to bioinformatics and popu
   - Your **Twitter/X handle**.
 - Return the distance as an integer and explain any transformations made.
   
-[Please refer to the README document for a comprehensive explanation.](https://github.com/elioe300/Hack_Bio_Internship_Projects/blob/main/Stage_1/stage_1_readme.md#hamming-distance-calculator)]
+[Please refer to the README document for a comprehensive explanation.](https://github.com/elioe300/Hack_Bio_Internship_Projects/blob/main/Stage_1/stage_1_readme.md#hamming-distance-calculator)
 
 ---
 
