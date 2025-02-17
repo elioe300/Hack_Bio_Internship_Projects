@@ -62,7 +62,7 @@ print(dataframe) # Output: {'DataFrame_1': [[0, 0.2689414213699951], [1, 0.28905
 ```
 
 ## Function
-logistic_equation(growth_rate, midpoint, L=1, randomize_growth_rate=False, randomize_midpoint=False, iterations=1)
+**logistic_equation(growth_rate, midpoint, L=1, randomize_growth_rate=False, randomize_midpoint=False, iterations=1)**
 
 Generates logistic growth data for a specified number of iterations.
 
