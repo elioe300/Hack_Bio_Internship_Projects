@@ -1,4 +1,4 @@
-# Hack_Bio_Internship_Projects
+# Hack Bio Internship Projects
 HackBio is a virtual training platform that is focused on equipping scientists globally with advanced bioinformatics and computational biology skills.
 
 ---
