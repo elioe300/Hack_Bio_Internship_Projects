@@ -49,7 +49,7 @@ This task involves writing multiple functions related to bioinformatics and popu
   - Your **Slack username**
   - Your **Twitter/X handle**.
 - Return the distance as an integer and explain any transformations made.
-- 
+  
 [["Please refer to the README document for a comprehensive explanation.](https://github.com/elioe300/Hack_Bio_Internship_Projects/blob/main/Stage_1/stage_1_readme.md#hamming-distance-calculator)]
 
 ---
