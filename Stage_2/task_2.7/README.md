@@ -96,7 +96,7 @@ We calculate the mean of the Pulse column, rounding to five decimal places:
 ```python
 mean_pulse = round(df["Pulse"].mean(), 5)
 print(f"Mean Pulse (rounded to 5 decimal places): {mean_pulse}")
-Mean Pulse (rounded to 5 decimal places): 73.63382
+# Output: Mean Pulse (rounded to 5 decimal places): 73.63382
 ```
 
 We determine the minimum and maximum values for diastolic blood pressure:
