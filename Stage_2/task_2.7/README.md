@@ -135,7 +135,7 @@ plt.show()
 ```
 
 ### Weight vs Height by Gender
-![Weight vs Height by Gender](scatterplot_weight_vs_height_gender.png)
+![Weight vs Height by Gender](figures/scatterplot_weight_vs_height_gender.png)
 
 ```python
 # Weight vs Height by Smoking Status
