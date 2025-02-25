@@ -174,23 +174,17 @@ We perform T-tests to analyze differences in age by gender, BMI by diabetes stat
 t_stat, p_value = stats.ttest_ind(df[df['Gender'] == 'male']['Age'].dropna(),
                                   df[df['Gender'] == 'female']['Age'].dropna())
 print(f"T-Test Age vs. Gender - p-value: {p_value:.5f}")
-T-Test Age vs. Gender - p-value: 0.08020
+# Output: T-Test Age vs. Gender - p-value: 0.08020
 ```
 
 ```
-T-Test Age vs. Gender - p-value: 0.08020
-T-Test BMI vs. Diabetes - p-value: 0.00000
-T-Test Alcohol vs. Marital Status - p-value: 0.00000
-```
-```
-
-Espero que te sea útil. 😊
 ```python
 # BMI vs. Diabetes
 t_stat, p_value = stats.ttest_ind(df[df['Diabetes'] == 'No']['BMI'].dropna(),
                                   df[df['Diabetes'] == 'Yes']['BMI'].dropna(),
                                   equal_var=False)
 print(f"T-Test BMI vs. Diabetes - p-value: {p_value:.5f}")
+# Output: T-Test BMI vs. Diabetes - p-value: 0.00000
 ```
 
 ```python
@@ -199,4 +193,5 @@ t_stat, p_value = stats.ttest_ind(df[df['RelationshipStatus'] == 'Single']['Alco
                                   df[df['RelationshipStatus'] == 'Committed']['AlcoholYear'].dropna(),
                                   equal_var=False)
 print(f"T-Test Alcohol vs. Marital Status - p-value: {p_value:.5f}")
+# Output: T-Test Alcohol vs. Marital Status - p-value: 0.00000
 ```
