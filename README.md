@@ -20,3 +20,16 @@ This project consists of several functions:
 - A function to **calculate the Hamming distance** between two strings (e.g., a Slack username and a Twitter/X handle).
 
 [If you wish, you can view it by clicking the link.](https://github.com/elioe300/Hack_Bio_Internship_Projects/tree/main/Stage_1)
+
+---
+
+## Stage 2 -> Coding and Visualization
+## Overview
+This project consists of several tasks:
+- Task Code 2.1: **Plotting growth curves and analyzing carrying capacity** in microbiology experiments.
+- Task Code 2.3: **Metabolic response analysis** in engineered plant mutants.
+- Task Code 2.4: **Investigating protein mutations** using SIFT and FoldX scores.
+- Task Code 2.6: **RNAseq gene expression analysis** to determine upregulated and downregulated genes.
+- Task Code 2.7: **NHANES data analysis** for public health research, including BMI, weight, pulse rate, and t-tests.
+
+[If you wish, you can view it by clicking the link.](https://github.com/elioe300/Hack_Bio_Internship_Projects/tree/main/Stage_2)
