@@ -96,6 +96,7 @@ We calculate the mean of the Pulse column, rounding to five decimal places:
 ```python
 mean_pulse = round(df["Pulse"].mean(), 5)
 print(f"Mean Pulse (rounded to 5 decimal places): {mean_pulse}")
+Mean Pulse (rounded to 5 decimal places): 73.63382
 ```
 
 We determine the minimum and maximum values for diastolic blood pressure:
@@ -104,7 +105,9 @@ We determine the minimum and maximum values for diastolic blood pressure:
 max_BPDia = df["BPDia"].max()
 min_BPDia = df["BPDia"].min()
 print(f"Minimum Diastolic Blood Pressure: {min_BPDia}")
+# Output: Minimum Diastolic Blood Pressure: 0.0
 print(f"Maximum Diastolic Blood Pressure: {max_BPDia}")
+# Output: Maximum Diastolic Blood Pressure: 116.0
 ```
 
 ### 5. Standard Deviation and Variance of Income
@@ -115,8 +118,11 @@ We calculate and display the standard deviation and variance of income:
 describe_income = df["Income"].describe()
 income_std_rounded = round(describe_income['std'], 5)
 income_variance_rounded = round(df["Income"].var(), 5)
+
 print(f"Standard Deviation (std): {income_std_rounded}")
+# Output: Standard Deviation (std): 33489.76064
 print(f"Variance: {income_variance_rounded}")
+# Output: Variance: 1121564067.88888
 ```
 
 ### 6. Scatter Plots
@@ -177,14 +183,13 @@ print(f"T-Test Age vs. Gender - p-value: {p_value:.5f}")
 # Output: T-Test Age vs. Gender - p-value: 0.08020
 ```
 
-```
 ```python
 # BMI vs. Diabetes
 t_stat, p_value = stats.ttest_ind(df[df['Diabetes'] == 'No']['BMI'].dropna(),
                                   df[df['Diabetes'] == 'Yes']['BMI'].dropna(),
                                   equal_var=False)
 print(f"T-Test BMI vs. Diabetes - p-value: {p_value:.5f}")
-# Output: T-Test BMI vs. Diabetes - p-value: 0.00000
+# Output: T-Test Age vs. Gender - p-value: 0.08020
 ```
 
 ```python
