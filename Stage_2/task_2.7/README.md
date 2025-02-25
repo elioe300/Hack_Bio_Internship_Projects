@@ -20,6 +20,7 @@ from scipy import stats
 data_path = "https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/R/nhanes.csv"
 df = pd.read_csv(data_path, sep=",")
 ```
+In this code snippet, we start by importing the necessary libraries: Pandas (import pandas as pd) for data manipulation, Seaborn (import seaborn as sns) for statistical data visualization, Matplotlib's pyplot module (import matplotlib.pyplotas plt) for creating visualizations, and the stats module from SciPy (from scipy import stats) for statistical analysis. We then load the NHANES dataset from its URL using pd.read_csv(), specifying a comma as the column separator. The dataset is read into a DataFrame named df, enabling efficient data handling and analysis.
 
 ### 2. Data Preprocessing
 
@@ -35,13 +36,13 @@ We create histograms to visualize the distribution of BMI, weight, age, and weig
 
 ```python
 # BMI Histogram
-df_BMI = df.dropna(subset=["BMI"])
-plt.figure(figsize=(10, 6))
-sns.histplot(df_BMI["BMI"])
-plt.title('Histogram of BMI')
-plt.xlabel('BMI')
-plt.savefig('figures/histogram_bmi.png')
-plt.show()
+df_BMI = df.dropna(subset=["BMI"])  # Removes rows with missing BMI values from the DataFrame
+plt.figure(figsize=(10, 6))  # Sets the figure size for the histogram plot
+sns.histplot(df_BMI["BMI"])  # Plots the BMI values using Seaborn's histplot
+plt.title('Histogram of BMI')  # Adds a title to the plot
+plt.xlabel('BMI')  # Labels the X-axis
+plt.savefig('histogram_bmi.png')  # Saves the generated histogram to a PNG file
+plt.show()  # Displays the histogram
 ```
 
 ### BMI Histogram
@@ -49,13 +50,13 @@ plt.show()
 
 ```python
 # Weight Histogram
-df_Weight = df.dropna(subset=["Weight"])
-plt.figure(figsize=(10, 6))
-sns.histplot(df_Weight["Weight"])
-plt.title('Histogram of Weight')
-plt.xlabel('Weight')
-plt.savefig('figures/histogram_weight.png')
-plt.show()
+df_Weight = df.dropna(subset=["Weight"])  # Removes rows with missing Weight values from the DataFrame
+plt.figure(figsize=(10, 6))  # Sets the figure size for the histogram plot
+sns.histplot(df_Weight["Weight"])  # Plots the Weight values using Seaborn's histplot
+plt.title('Histogram of Weight')  # Adds a title to the plot
+plt.xlabel('Weight')  # Labels the X-axis
+plt.savefig('histogram_weight.png')  # Saves the generated histogram to a PNG file
+plt.show()  # Displays the histogram
 ```
 
 ### Weight Histogram
@@ -63,13 +64,13 @@ plt.show()
 
 ```python
 # Age Histogram
-df_Age = df.dropna(subset=["Age"])
-plt.figure(figsize=(10, 6))
-sns.histplot(df_Age["Age"])
-plt.title('Histogram of Age')
-plt.xlabel('Age')
-plt.savefig('figures/histogram_age.png')
-plt.show()
+df_Age = df.dropna(subset=["Age"])  # Removes rows with missing Age values from the DataFrame
+plt.figure(figsize=(10, 6))  # Sets the figure size for the histogram plot
+sns.histplot(df_Age["Age"])  # Plots the Age values using Seaborn's histplot
+plt.title('Histogram of Age')  # Adds a title to the plot
+plt.xlabel('Age')  # Labels the X-axis
+plt.savefig('histogram_age.png')  # Saves the generated histogram to a PNG file
+plt.show()  # Displays the histogram
 ```
 
 ### Age Histogram
@@ -77,13 +78,14 @@ plt.show()
 
 ```python
 # Weight in Pounds Histogram
-df_Weight_in_Pounds = df["Weight"] * 2.2
-plt.figure(figsize=(10, 6))
-sns.histplot(df_Weight_in_Pounds, bins=20)
-plt.title('Histogram of Weight in Pounds')
-plt.xlabel('Weight in Pounds')
-plt.savefig('figures/histogram_weight_in_pounds.png')
-plt.show()
+df_Weight_in_Pounds = df.dropna(subset=["Weight"])  # Removes rows with missing Weight values from the DataFrame
+df_Weight_in_Pounds = df["Weight"] * 2.2  # Converts Weight from kilograms to pounds
+plt.figure(figsize=(10, 6))  # Sets the figure size for the histogram plot
+sns.histplot(df_Weight_in_Pounds, bins=20)  # Plots the Weight in pounds values using Seaborn's histplot
+plt.title('Histogram of Weight in Pounds')  # Adds a title to the plot
+plt.xlabel('Weight in Pounds')  # Labels the X-axis
+plt.savefig('histogram_weight_in_pounds.png')  # Saves the generated histogram to a PNG file
+plt.show()  # Displays the histogram
 ```
 
 ### Weight in Pounds Histogram
@@ -98,6 +100,7 @@ mean_pulse = round(df["Pulse"].mean(), 5)
 print(f"Mean Pulse (rounded to 5 decimal places): {mean_pulse}")
 # Output: Mean Pulse (rounded to 5 decimal places): 73.63382
 ```
+In this step, we calculate the mean of the 'Pulse' column in the DataFrame using the mean() method, round the mean value to five decimal places with the round() function, and print the rounded mean value.
 
 We determine the minimum and maximum values for diastolic blood pressure:
 
@@ -109,6 +112,8 @@ print(f"Minimum Diastolic Blood Pressure: {min_BPDia}")
 print(f"Maximum Diastolic Blood Pressure: {max_BPDia}")
 # Output: Maximum Diastolic Blood Pressure: 116.0
 ```
+
+In this step, we calculate the maximum and minimum values of the 'BPDia' (Diastolic Blood Pressure) column using the max() and min() methods, and then print these values.
 
 ### 5. Standard Deviation and Variance of Income
 
@@ -124,6 +129,7 @@ print(f"Standard Deviation (std): {income_std_rounded}")
 print(f"Variance: {income_variance_rounded}")
 # Output: Variance: 1121564067.88888
 ```
+Here, we calculate descriptive statistics for the 'Income' column in the DataFrame by using the describe() method. We then extract the standard deviation from the descriptive statistics and calculate the variance directly from the 'Income' column. Both the standard deviation and the variance are rounded to five decimal places using the round() function, and finally, the rounded values are printed.
 
 ### 6. Scatter Plots
 
@@ -131,13 +137,13 @@ We create scatter plots to analyze relationships between weight, height, gender,
 
 ```python
 # Weight vs Height by Gender
-plt.figure(figsize=(10, 6))
-sns.scatterplot(data=df, x="Weight", y="Height", hue="Gender")
-plt.title('Scatterplot of Weight vs Height (Gender)')
-plt.xlabel('Weight')
-plt.ylabel('Height')
-plt.savefig('figures/scatterplot_weight_vs_height_gender.png')
-plt.show()
+plt.figure(figsize=(10, 6))  # Set the figure size
+sns.scatterplot(data=df, x="Weight", y="Height", hue="Gender")  # Scatter plot colored by Gender
+plt.title('Scatterplot of Weight vs Height (Gender)')  # Add a title to the plot
+plt.xlabel('Weight')  # Label the X-axis
+plt.ylabel('Height')  # Label the Y-axis
+plt.savefig('scatterplot_weight_vs_height_gender.png')  # Save the plot as a PNG file
+plt.show()  # Display the plot
 ```
 
 ### Weight vs Height by Gender
@@ -145,13 +151,13 @@ plt.show()
 
 ```python
 # Weight vs Height by Smoking Status
-plt.figure(figsize=(10, 6))
-sns.scatterplot(data=df, x="Weight", y="Height", hue="SmokingStatus")
-plt.title('Scatterplot of Weight vs Height (SmokingStatus)')
-plt.xlabel('Weight')
-plt.ylabel('Height')
-plt.savefig('figures/scatterplot_weight_vs_height_smokingstatus.png')
-plt.show()
+plt.figure(figsize=(10, 6))  # Set the figure size
+sns.scatterplot(data=df, x="Weight", y="Height", hue="SmokingStatus")  # Scatter plot colored by Smoking Status
+plt.title('Scatterplot of Weight vs Height (SmokingStatus)')  # Add a title to the plot
+plt.xlabel('Weight')  # Label the X-axis
+plt.ylabel('Height')  # Label the Y-axis
+plt.savefig('scatterplot_weight_vs_height_smokingstatus.png')  # Save the plot as a PNG file
+plt.show()  # Display the plot
 ```
 
 ### Weight vs Height by Gender
@@ -159,13 +165,13 @@ plt.show()
 
 ```python
 # Weight vs Height by Diabetes
-plt.figure(figsize=(10, 6))
-sns.scatterplot(data=df, x="Weight", y="Height", hue="Diabetes")
-plt.title('Scatterplot of Weight vs Height (Diabetes)')
-plt.xlabel('Weight')
-plt.ylabel('Height')
-plt.savefig('figures/scatterplot_weight_vs_height_diabetes.png')
-plt.show()
+plt.figure(figsize=(10, 6))  # Set the figure size
+sns.scatterplot(data=df, x="Weight", y="Height", hue="Diabetes")  # Scatter plot colored by Diabetes status
+plt.title('Scatterplot of Weight vs Height (Diabetes)')  # Add a title to the plot
+plt.xlabel('Weight')  # Label the X-axis
+plt.ylabel('Height')  # Label the Y-axis
+plt.savefig('scatterplot_weight_vs_height_diabetes.png')  # Save the plot as a PNG file
+plt.show()  # Display the plot
 ```
 
 ### Weight vs Height by Diabetes
@@ -200,3 +206,7 @@ t_stat, p_value = stats.ttest_ind(df[df['RelationshipStatus'] == 'Single']['Alco
 print(f"T-Test Alcohol vs. Marital Status - p-value: {p_value:.5f}")
 # Output: T-Test Alcohol vs. Marital Status - p-value: 0.00000
 ```
+
+In this task, we conduct T-tests to compare means between different groups. We extract Age data for males and females, perform a T-test to compare ages between genders, and print the p-value of the T-test. Similarly, we extract BMI data for individuals with and without diabetes, perform a T-test to compare BMI between these groups, and print the p-value. Finally, we extract alcohol consumption data for single and committed individuals, perform a T-test to compare alcohol consumption between these groups, and print the p-value.
+
+---
