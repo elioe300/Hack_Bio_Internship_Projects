@@ -16,41 +16,41 @@ df_process = df.dropna()
 
 ## Task number 2
 # Create and save the first histogram of BMI
-df_BMI = df.dropna(subset=["BMI"])
-plt.figure(figsize=(10, 6))
-sns.histplot(df_BMI["BMI"])
-plt.title('Histogram of BMI')
-plt.xlabel('BMI')  # Label the X-axis
-plt.savefig('histogram_bmi.png')  # Save the plot to a file
-plt.show()
+df_BMI = df.dropna(subset=["BMI"])  # Removes rows with missing BMI values from the DataFrame
+plt.figure(figsize=(10, 6))  # Sets the figure size for the histogram plot
+sns.histplot(df_BMI["BMI"])  # Plots the BMI values using Seaborn's histplot
+plt.title('Histogram of BMI')  # Adds a title to the plot
+plt.xlabel('BMI')  # Labels the X-axis
+plt.savefig('histogram_bmi.png')  # Saves the generated histogram to a PNG file
+plt.show()  # Displays the histogram
 
 # Create and save the second histogram of Weight
-df_Weight = df.dropna(subset=["Weight"])
-plt.figure(figsize=(10, 6))
-sns.histplot(df_Weight["Weight"])
-plt.title('Histogram of Weight')
-plt.xlabel('Weight')  # Label the X-axis
-plt.savefig('histogram_weight.png')  # Save the plot to a file
-plt.show()
+df_Weight = df.dropna(subset=["Weight"])  # Removes rows with missing Weight values from the DataFrame
+plt.figure(figsize=(10, 6))  # Sets the figure size for the histogram plot
+sns.histplot(df_Weight["Weight"])  # Plots the Weight values using Seaborn's histplot
+plt.title('Histogram of Weight')  # Adds a title to the plot
+plt.xlabel('Weight')  # Labels the X-axis
+plt.savefig('histogram_weight.png')  # Saves the generated histogram to a PNG file
+plt.show()  # Displays the histogram
 
 # Create and save the third histogram of Age
-df_Age = df.dropna(subset=["Age"])
-plt.figure(figsize=(10, 6))
-sns.histplot(df_Age["Age"])
-plt.title('Histogram of Age')
-plt.xlabel('Age')  # Label the X-axis
-plt.savefig('histogram_age.png')  # Save the plot to a file
-plt.show()
+df_Age = df.dropna(subset=["Age"])  # Removes rows with missing Age values from the DataFrame
+plt.figure(figsize=(10, 6))  # Sets the figure size for the histogram plot
+sns.histplot(df_Age["Age"])  # Plots the Age values using Seaborn's histplot
+plt.title('Histogram of Age')  # Adds a title to the plot
+plt.xlabel('Age')  # Labels the X-axis
+plt.savefig('histogram_age.png')  # Saves the generated histogram to a PNG file
+plt.show()  # Displays the histogram
 
 # Create and save the fourth histogram of Weight in pounds
-df_Weight_in_Pounds = df.dropna(subset=["Weight"])
-df_Weight_in_Pounds = df["Weight"] * 2.2
-plt.figure(figsize=(10, 6))
-sns.histplot(df_Weight_in_Pounds, bins=20)
-plt.title('Histogram of Weight in Pounds')
-plt.xlabel('Weight in Pounds')  # Label the X-axis
-plt.savefig('histogram_weight_in_pounds.png')
-plt.show()
+df_Weight_in_Pounds = df.dropna(subset=["Weight"])  # Removes rows with missing Weight values from the DataFrame
+df_Weight_in_Pounds = df["Weight"] * 2.2  # Converts Weight from kilograms to pounds
+plt.figure(figsize=(10, 6))  # Sets the figure size for the histogram plot
+sns.histplot(df_Weight_in_Pounds, bins=20)  # Plots the Weight in pounds values using Seaborn's histplot
+plt.title('Histogram of Weight in Pounds')  # Adds a title to the plot
+plt.xlabel('Weight in Pounds')  # Labels the X-axis
+plt.savefig('histogram_weight_in_pounds.png')  # Saves the generated histogram to a PNG file
+plt.show()  # Displays the histogram
 
 ## Task number 3
 
@@ -97,31 +97,31 @@ print(f"Standard Deviation (std): {income_std_rounded}")
 print(f"Variance: {income_variance_rounded}")
 
 ## Task number 5
-plt.figure(figsize=(10, 6))
-sns.scatterplot(data=df, x="Weight", y="Height", hue="Gender")
-plt.title('Scatterplot of Weight vs Height (Gender)')
-plt.xlabel('Weight')
-plt.ylabel('Height')
-plt.savefig('scatterplot_weight_vs_height_gender.png')
-plt.show()
+plt.figure(figsize=(10, 6))  # Set the figure size
+sns.scatterplot(data=df, x="Weight", y="Height", hue="Gender")  # Scatter plot colored by Gender
+plt.title('Scatterplot of Weight vs Height (Gender)')  # Add a title to the plot
+plt.xlabel('Weight')  # Label the X-axis
+plt.ylabel('Height')  # Label the Y-axis
+plt.savefig('scatterplot_weight_vs_height_gender.png')  # Save the plot as a PNG file
+plt.show()  # Display the plot
 
 # Scatterplot 2: Weight vs Height colored by SmokingStatus
-plt.figure(figsize=(10, 6))
-sns.scatterplot(data=df, x="Weight", y="Height", hue="SmokingStatus")
-plt.title('Scatterplot of Weight vs Height (SmokingStatus)')
-plt.xlabel('Weight')
-plt.ylabel('Height')
-plt.savefig('scatterplot_weight_vs_height_smokingstatus.png')
-plt.show()
+plt.figure(figsize=(10, 6))  # Set the figure size
+sns.scatterplot(data=df, x="Weight", y="Height", hue="SmokingStatus")  # Scatter plot colored by Smoking Status
+plt.title('Scatterplot of Weight vs Height (SmokingStatus)')  # Add a title to the plot
+plt.xlabel('Weight')  # Label the X-axis
+plt.ylabel('Height')  # Label the Y-axis
+plt.savefig('scatterplot_weight_vs_height_smokingstatus.png')  # Save the plot as a PNG file
+plt.show()  # Display the plot
 
 # Scatterplot 3: Weight vs Height colored by Diabetes
-plt.figure(figsize=(10, 6))
-sns.scatterplot(data=df, x="Weight", y="Height", hue="Diabetes")
-plt.title('Scatterplot of Weight vs Height (Diabetes)')
-plt.xlabel('Weight')
-plt.ylabel('Height')
-plt.savefig('scatterplot_weight_vs_height_diabetes.png')
-plt.show()
+plt.figure(figsize=(10, 6))  # Set the figure size
+sns.scatterplot(data=df, x="Weight", y="Height", hue="Diabetes")  # Scatter plot colored by Diabetes status
+plt.title('Scatterplot of Weight vs Height (Diabetes)')  # Add a title to the plot
+plt.xlabel('Weight')  # Label the X-axis
+plt.ylabel('Height')  # Label the Y-axis
+plt.savefig('scatterplot_weight_vs_height_diabetes.png')  # Save the plot as a PNG file
+plt.show()  # Display the plot
 
 ## Task number 6
 # Age vs. Gender
