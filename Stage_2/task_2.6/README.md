@@ -110,7 +110,7 @@ We determine the top 5 upregulated and downregulated genes:
 # Sort upregulated genes by log2FoldChange in descending order
 upregulated_genes_sorted = upregulated_genes_df.sort_values(by='log2FoldChange', ascending=False)
 print("Top 5 upregulated genes:", upregulated_genes_sorted["Gene"].head(5).tolist())
-Top 5 upregulated genes: ['DTHD1', 'EMILIN2', 'PI16', 'C4orf45', 'FAM180B']
+#Output: Top 5 upregulated genes: ['DTHD1', 'EMILIN2', 'PI16', 'C4orf45', 'FAM180B']
 
 # Sort downregulated genes by log2FoldChange in descending order
 downregulated_genes_sorted = downregulated_genes_df.sort_values(by='log2FoldChange', ascending=False)
