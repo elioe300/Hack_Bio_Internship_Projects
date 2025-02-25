@@ -92,7 +92,7 @@ plt.show()
 ```
 
 ### Bar Plot
-![Bar Plot of Frequency of Amino Acids](figures/Bar plot of Frequency of Amino Acids.png)
+![Bar Plot of Frequency of Amino Acids](figures/Bar%20plot%20of%20Frequency%20of%20Amino%20Acids.png)
 
 ```python
 # Pie chart for amino acid frequencies
@@ -105,7 +105,7 @@ plt.show()
 ```
 
 ### Pie Chart
-![Pie Chart of Frequency of Amino Acids](figures/Pie chart of Frequency of Amino Acids.png
+![Pie Chart of Frequency of Amino Acids](figures/Pie%20chart%20of%20Frequency%20of%20Amino%20Acids.png)
 
 
 
