@@ -34,14 +34,14 @@ time = df["time"]
 strains = df.columns[1:]
 
 # Plot growth curves
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(12, 6))  # Set the figure size 
 for strain in strains:
     plt.plot(time, df[strain], label=strain)
-plt.xlabel("Time (minutes)")
-plt.ylabel("OD600 (Bacterial Growth)")
-plt.title("Bacterial Growth Curves")
-plt.legend(loc="upper left", bbox_to_anchor=(1, 1))
-plt.show()
+plt.xlabel("Time (minutes)")  # Label the X-axis
+plt.ylabel("OD600 (Bacterial Growth)")  # Label the Y-axis
+plt.title("Bacterial Growth Curves")  # Add a title to the plot
+plt.legend(loc="upper left", bbox_to_anchor=(1, 1))  # Add a legend outside the plot
+plt.show()  # Display the plot
 ```
 ### Growth curves
 ![Growth curves](figures/Bacterial%20Growth%20Curves.png)
