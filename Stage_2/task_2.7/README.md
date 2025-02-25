@@ -44,6 +44,9 @@ plt.savefig('figures/histogram_bmi.png')
 plt.show()
 ```
 
+### BMI Histogram
+![BMI Histogram](figures/histogram_bmi.png)
+
 ```python
 # Weight Histogram
 df_Weight = df.dropna(subset=["Weight"])
@@ -54,6 +57,9 @@ plt.xlabel('Weight')
 plt.savefig('figures/histogram_weight.png')
 plt.show()
 ```
+
+### Weight Histogram
+![Weight Histogram](figures/histogram_weight.png)
 
 ```python
 # Age Histogram
@@ -66,6 +72,9 @@ plt.savefig('figures/histogram_age.png')
 plt.show()
 ```
 
+### Age Histogram
+![Age Histogram](figures/histogram_age.png)
+
 ```python
 # Weight in Pounds Histogram
 df_Weight_in_Pounds = df["Weight"] * 2.2
@@ -76,6 +85,9 @@ plt.xlabel('Weight in Pounds')
 plt.savefig('figures/histogram_weight_in_pounds.png')
 plt.show()
 ```
+
+### Weight in Pounds Histogram
+![Weight in Pounds Histogram](figures/histogram_weight_in_pounds.png)
 
 ### 4. Descriptive Statistics
 
@@ -122,6 +134,9 @@ plt.savefig('figures/scatterplot_weight_vs_height_gender.png')
 plt.show()
 ```
 
+### Weight vs Height by Gender
+![Weight vs Height by Gender](scatterplot_weight_vs_height_gender.png)
+
 ```python
 # Weight vs Height by Smoking Status
 plt.figure(figsize=(10, 6))
@@ -133,6 +148,9 @@ plt.savefig('figures/scatterplot_weight_vs_height_smokingstatus.png')
 plt.show()
 ```
 
+### Weight vs Height by Gender
+![Weight vs Height by Gender](figures/scatterplot_weight_vs_height_smokingstatus.png)
+
 ```python
 # Weight vs Height by Diabetes
 plt.figure(figsize=(10, 6))
@@ -143,6 +161,9 @@ plt.ylabel('Height')
 plt.savefig('figures/scatterplot_weight_vs_height_diabetes.png')
 plt.show()
 ```
+
+### Weight vs Height by Diabetes
+![Weight vs Height by Diabetes](figures/scatterplot_weight_vs_height_diabetes.png)
 
 ### 7. Statistical Tests
 
