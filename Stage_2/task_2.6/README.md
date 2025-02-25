@@ -59,26 +59,25 @@ We create a volcano plot to visualize differential gene expression:
 
 ```python
 # Color map for scatter plot
-color_map = {'Up': 'red', 'Down': 'blue', 'No': 'grey'}
+color_map = {'Up': 'red', 'Down': 'blue', 'No': 'grey'}  # Define colors for different gene regulations
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 6))  # Set the figure size for the plot
 sns.scatterplot(
     data=gene_expression_df, x='log2FoldChange', y='-log10_pvalue', hue='regulation', palette=color_map
-)
+)  # Create a scatter plot for gene expression data with custom colors
 
 # Reference lines for significance thresholds
-plt.axhline(y=-np.log10(0.01), color='r', linestyle='--', label='p = 0.01')
-plt.axvline(x=1, color='r', linestyle='--', label='log2FC = 1')
-plt.axvline(x=-1, color='r', linestyle='--', label='log2FC = -1')
+plt.axhline(y=-np.log10(0.01), color='r', linestyle='--', label='p = 0.01')  # Add a horizontal reference line at p = 0.01
+plt.axvline(x=1, color='r', linestyle='--', label='log2FC = 1')  # Add a vertical reference line at log2 fold change = 1
+plt.axvline(x=-1, color='r', linestyle='--', label='log2FC = -1')  # Add a vertical reference line at log2 fold change = -1
 
 # Labels and title
-plt.title('Volcano Plot')
-plt.xlabel('log2(Fold Change)')
-plt.ylabel('-log10(p-value)')
-plt.legend(title='Gene Regulation')
-plt.show()
+plt.title('Volcano Plot')  # Add a title to the plot
+plt.xlabel('log2(Fold Change)')  # Label the X-axis
+plt.ylabel('-log10(p-value)')  # Label the Y-axis
+plt.legend(title='Gene Regulation')  # Add a legend with the title 'Gene Regulation'
+plt.show()  
 ```
-Here, we create a scatter plot where each point represents a gene. The x-axis shows the log2 fold change, indicating the magnitude of change in expression, while the y-axis shows the -log10(p-value), indicating statistical significance. Genes that are significantly upregulated (red) and downregulated (blue) stand out from non-significant genes (grey). The reference lines mark commonly used significance thresholds.
 
 ### Volcano Plot
 ![Volcano Plot](figures/Volcano%20Plot.png)
