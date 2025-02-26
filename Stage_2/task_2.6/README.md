@@ -118,3 +118,21 @@ print("Top 5 downregulated genes:", downregulated_genes_sorted["Gene"].head(5).t
 ```
 Here, we sort the upregulated and downregulated genes by their log2 fold change values to identify the most differentially expressed genes. The top 5 genes from each category are printed to highlight the most significant changes.
 
+---
+
+## Top 5 Upregulated Genes:
+
+1. **DTHD1**: This gene encodes a protein containing a death domain, which is involved in signaling pathways and the apoptosis pathway.
+2. **EMILIN2**: Encodes a protein that is part of the extracellular matrix and is involved in processes like angiogenesis and platelet aggregation.
+3. **PI16**: Encodes a peptidase inhibitor that may inhibit cardiomyocyte growth and is involved in negative regulation of peptidase activity.
+4. **C4orf45**: This gene encodes a protein predicted to be localized in the cytoplasm and nucleus, but its specific function is not well characterized.
+5. **FAM180B**: Predicted to be located in the extracellular region and is associated with diseases like borderline leprosy and mosaic variegated aneuploidy syndrome.
+
+## Top 5 Downregulated Genes:
+
+1. **FAM46B**: Encodes a polyadenylation polymerase involved in the maintenance of translational efficiency and is essential for the viability of human embryonic stem cells.
+2. **HS3ST3A1**: Encodes a sulfotransferase involved in the biosynthesis of heparan sulfate, which plays a role in various biological activities.
+3. **PMEL**: Encodes a protein involved in melanosome maturation and melanin production, playing a crucial role in pigmentation.
+4. **TNFAIP6**: Encodes a protein involved in extracellular matrix stability and cell migration, and is associated with inflammation.
+5. **COL4A2**: Encodes a type IV collagen protein that is a major structural component of basement membranes and is involved in angiogenesis and tumor growth inhibition.
+
