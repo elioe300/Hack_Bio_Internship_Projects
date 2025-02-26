@@ -62,6 +62,7 @@ mean_pulse_rounded = round(mean_pulse, 5)
 
 # Print the rounded mean value
 print(f"Mean Pulse (rounded to 5 decimal places): {mean_pulse_rounded}")
+# Output: Mean Pulse (rounded to 5 decimal places): 73.63382
 
 ## Exercise number 3
 
@@ -71,9 +72,12 @@ max_BPDia = df["BPDia"].max()
 # Calculate the minimum value of the 'BPDia' column
 min_BPDia = df["BPDia"].min()
 
+
 # Print the minimum and maximum values
 print(f"Minimum Diastolic Blood Pressure: {min_BPDia}")
+# Output: Minimum Diastolic Blood Pressure: 0.0
 print(f"Maximum Diastolic Blood Pressure: {max_BPDia}")
+# Output: Maximum Diastolic Blood Pressure: 116.0
 
 ## Task number 4
 
@@ -94,7 +98,10 @@ income_variance_rounded = round(income_variance, 5)
 
 # Print the rounded standard deviation and variance
 print(f"Standard Deviation (std): {income_std_rounded}")
+# Output: Standard Deviation (std): 33489.76064
 print(f"Variance: {income_variance_rounded}")
+print(f"Variance: {income_variance_rounded}")
+# Output: Variance: 1121564067.88888
 
 ## Task number 5
 plt.figure(figsize=(10, 6))  # Set the figure size
@@ -129,15 +136,18 @@ male_age = df[df['Gender'] == 'male']['Age']
 female_age = df[df['Gender'] == 'female']['Age']
 t_stat, p_value = stats.ttest_ind(male_age.dropna(), female_age.dropna())
 print(f"T-Test Age vs. Gender - p-value: {p_value:.5f}")
+# Output: T-Test Age vs. Gender - p-value: 0.08020
 
 # BMI vs. Diabetes
 bmi_no_diabetes = df[df['Diabetes'] == 'No']['BMI']
 bmi_diabetes = df[df['Diabetes'] == 'Yes']['BMI']
 t_stat, p_value = stats.ttest_ind(bmi_no_diabetes.dropna(), bmi_diabetes.dropna(), equal_var=False)
 print(f"T-Test BMI vs. Diabetes - p-value: {p_value:.5f}")
+# Output: T-Test BMI vs. Diabetes - p-value: 0.00000
 
 # Alcohol per year vs. Marital Status
 alcohol_single = df[df['RelationshipStatus'] == 'Single']["AlcoholYear"]
 alcohol_committed = df[df['RelationshipStatus'] == 'Committed']["AlcoholYear"]
 t_stat, p_value = stats.ttest_ind(alcohol_single.dropna(), alcohol_committed.dropna(), equal_var=False)
 print(f"T-Test Alcohol vs. Marital Status - p-value: {p_value:.5f}")
+# Output: T-Test Alcohol vs. Marital Status - p-value: 0.00000
