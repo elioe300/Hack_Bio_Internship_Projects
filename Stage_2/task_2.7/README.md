@@ -1,4 +1,4 @@
-# NHANES Data Analysis Project
+# Health Data Analysis Project
 
 ## Overview
 
