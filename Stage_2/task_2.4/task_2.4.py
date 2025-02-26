@@ -55,3 +55,28 @@ plt.title('Frequency of Amino Acids')
 plt.axis('equal')
 plt.savefig('Pie chart of Frequency of Amino Acids.png')
 plt.show()
+
+
+## Amino Acid with Highest Impact:
+
+# Glycine (G) is a small and flexible amino acid that significantly impacts protein structure by allowing tight turns and facilitating folding. It is found 1307 times.
+
+## Structural and Functional Properties of Amino Acids with >100 Occurrences:
+
+# Glycine (G): Small and flexible, aids in protein folding.
+
+# Leucine (L): Hydrophobic, stabilizes protein core.
+
+# Isoleucine (I): Hydrophobic, contributes to structural stability.
+
+# Arginine (R): Basic, involved in binding phosphate groups.
+
+# Proline (P): Causes kinks in protein chains, disrupts regular structures.
+
+# Alanine (A): Small, helps in stabilizing protein structure.
+
+# Tyrosine (Y): Polar, involved in signaling and enzyme activity.
+
+# Valine (V): Hydrophobic, stabilizes protein structure.
+
+# Tryptophan (W): Largest amino acid, involved in protein-protein interactions.
