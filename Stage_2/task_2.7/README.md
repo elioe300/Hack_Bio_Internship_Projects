@@ -195,7 +195,7 @@ t_stat, p_value = stats.ttest_ind(df[df['Diabetes'] == 'No']['BMI'].dropna(),
                                   df[df['Diabetes'] == 'Yes']['BMI'].dropna(),
                                   equal_var=False)
 print(f"T-Test BMI vs. Diabetes - p-value: {p_value:.5f}")
-# Output: T-Test Age vs. Gender - p-value: 0.08020
+# Output: T-Test BMI vs. Diabetes - p-value: 0.00000
 ```
 
 ```python
