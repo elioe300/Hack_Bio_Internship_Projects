@@ -1,4 +1,4 @@
-# [Microbiology Data Analysis Project](./task_2.1/)
+# [Bacterial Growth Analysis Project](./task_2.1/)
 
 ## Dataset Information
 - [Look at this dataset here](https://raw.githubusercontent.com/HackBio-Internship/2025_project_collection/refs/heads/main/Python/Dataset/mcgc.tsv)
@@ -26,7 +26,7 @@ This project involves analyzing microbiology data to understand the growth patte
   
 ---
 
-# [Protein Mutations Analysis Projec](./task_2.4/)
+# [Protein Mutations Analysis Project](./task_2.4/)
 
 ## Dataset Information
 - [SIFT Dataset](https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/R/datasets/sift.tsv)
